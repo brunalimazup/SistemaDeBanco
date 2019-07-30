@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Banco </title>
+</head>
+
+<body>
+    <div th:each="clientes : ${cliente}">
+        <table>
+            <tr>
+                <td><strong>Nome: </strong></td>
+                <td th:text="${clientes.nome}"></td>
+            </tr>
+
+            <tr>
+                <td><strong>Telefone: </strong></td>
+                <td th:text="${clientes.telefone}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div th:each="contas : ${conta}">
+        <table>
+            <tr>
+                <td><strong>Saldo Conta Corrente: </strong></td>
+                <td th:text="${contas.saldoCorrente}"></td>
+            </tr>
+
+            <tr>
+                <td><strong>Saldo Conta Poupança: </strong></td>
+                <td th:text="${contas.saldoPoupanca}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
